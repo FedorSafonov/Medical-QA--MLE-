@@ -81,22 +81,6 @@ st.write(texts['description'])
 # Поле ввода вопроса
 question = st.text_input(texts['input_label'])
 
-# JavaScript код для поиска по Enter
-st.markdown(
-    """
-    <script>
-    const input = document.querySelector('input[type="text"]');
-    input.addEventListener('keyup', function(event) {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            document.querySelector('button[kind="primary"]').click();
-        }
-    });
-    </script>
-    """,
-    unsafe_allow_html=True,
-)
-
 # Кнопка "Найти похожие вопросы"
 if st.button(texts["button_label"]):
     # Поиск похожих вопросов
