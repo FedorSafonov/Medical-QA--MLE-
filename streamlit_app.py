@@ -40,7 +40,7 @@ def find_similar_questions(question, model, idx2emd, idx2sen, top_n=5):
 # Словарь с переводами
 translations = {
     "ru": {
-        "title": "Поиск похожих вопросов",
+        "title": "Поиск похожих медицинских вопросов",
         "description": "Введите ваш вопрос, и мы найдем наиболее похожие вопросы из базы данных.",
         "input_label": "Введите ваш вопрос:",
         "button_label": "Найти похожие вопросы",
@@ -48,7 +48,7 @@ translations = {
         "similarity_label": "сходство"
     },
     "en": {
-        "title": "Similar Questions Search",
+        "title": "Similar Medical Questions Search",
         "description": "Enter your question, and we will find the most similar questions from the database.",
         "input_label": "Enter your question:",
         "button_label": "Find Similar Questions",
