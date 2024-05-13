@@ -14,7 +14,6 @@ Requests==2.31.0
 scikit_learn==1.4.2
 scipy==1.13.0
 sentence_transformers==2.7.0
-skimpy==0.0.14
 spacy==3.7.4
 tensorflow_hub==0.16.1
 torch==2.3.0
