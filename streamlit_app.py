@@ -79,16 +79,17 @@ st.title(texts['title'])
 st.write(texts['description'])
 
 # Поле ввода вопроса
-question = st.text_input("Введите ваш вопрос:")
+question = st.text_input(texts['input_label'])
 
+# JavaScript код для поиска по Enter
 st.markdown(
     """
     <script>
     const input = document.querySelector('input[type="text"]');
-    input.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
+    input.addEventListener('keyup', function(event) {
+        if (event.keyCode === 13) {
             event.preventDefault();
-            document.querySelector('button').click();
+            document.querySelector('button[kind="primary"]').click();
         }
     });
     </script>
