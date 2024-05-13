@@ -26,6 +26,21 @@ st.write("Введите ваш вопрос,  и мы найдем наибол
 # Поле ввода вопроса
 question = st.text_input("Введите ваш вопрос:")
 
+st.markdown(
+    """
+    <script>
+    const input = document.querySelector('input[type="text"]');
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.querySelector('button').click();
+        }
+    });
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
+
 def find_similar_questions(question, model, idx2emd, idx2sen, top_n=5):
     """
     Находит n наиболее похожих вопросов.
