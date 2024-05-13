@@ -17,6 +17,26 @@ def load_data():
 
 model, idx2emd, idx2sen = load_data()
 
+
+def find_similar_questions(question, model, idx2emd, idx2sen, top_n=5):
+    """
+    Находит n наиболее похожих вопросов.
+
+    Args:
+        question (str): Входной вопрос.
+        model (SentenceTransformer): Модель SentenceTransformers.
+        idx2emd (dict): Словарь индекс-эмбеддинг.
+        idx2sen (dict): Словарь индекс-вопрос.
+        top_n (int, optional): Количество возвращаемых похожих вопросов. Defaults to 5.
+
+    Returns:
+        list: Список кортежей (вопрос,  оценка сходства).
+    """
+    question_embedding = model.encode(question)
+    similarities = [util.cos_sim(question_embedding, emb) for emb in idx2emd.values()]
+    top_indices = np.argsort(similarities)[-top_n:][::-1]
+    return [(idx2sen[idx], similarities[idx].item()) for idx in top_indices]
+
 # Словарь с переводами
 translations = {
     "ru": {
@@ -76,27 +96,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-def find_similar_questions(question, model, idx2emd, idx2sen, top_n=5):
-    """
-    Находит n наиболее похожих вопросов.
-
-    Args:
-        question (str): Входной вопрос.
-        model (SentenceTransformer): Модель SentenceTransformers.
-        idx2emd (dict): Словарь индекс-эмбеддинг.
-        idx2sen (dict): Словарь индекс-вопрос.
-        top_n (int, optional): Количество возвращаемых похожих вопросов. Defaults to 5.
-
-    Returns:
-        list: Список кортежей (вопрос,  оценка сходства).
-    """
-    question_embedding = model.encode(question)
-    similarities = [util.cos_sim(question_embedding, emb) for emb in idx2emd.values()]
-    top_indices = np.argsort(similarities)[-top_n:][::-1]
-    return [(idx2sen[idx], similarities[idx].item()) for idx in top_indices]
-
 # Кнопка "Найти похожие вопросы"
-if st.button("Найти похожие вопросы"):
+if st.button(texts["button_label"]):
     # Поиск похожих вопросов
     similar_questions = find_similar_questions(question, model, idx2emd, idx2sen)
 
