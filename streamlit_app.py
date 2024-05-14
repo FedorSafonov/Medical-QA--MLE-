@@ -62,7 +62,11 @@ if 'language' not in st.session_state:
     st.session_state.language = 'ru'
 
 # Кнопка выбора языка
-selected_language = st.radio("Language / Язык", ['Русский', 'English'], index=0 if st.session_state.language == 'ru' else 1)
+selected_language = st.radio("Language / Язык",
+                             ['Русский', 'English'],
+                             index=0 if st.session_state.language == 'ru'
+                             else 1)
+
 if selected_language == 'Русский':
     st.session_state.language = 'ru'
 else:

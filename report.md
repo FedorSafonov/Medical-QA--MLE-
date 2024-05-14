@@ -505,3 +505,11 @@
    * **Fine-tuning  моделей:**  Можно провести более глубокое исследование fine-tuning  моделей SentenceTransformers,  экспериментируя с различными loss-функциями,  параметрами обучения  и методами отбора данных. 
    * **Разработка более сложного интерфейса:**  Можно добавить в приложение Streamlit  возможности фильтрации,  сортировки,  пагинации  и другие функции,  которые улучшат пользовательский опыт.
    * **Интеграция с другими сервисами:**  API  FastAPI  может быть интегрирован с другими сервисами,  такими как чат-боты,  системы вопросов-ответов  или поисковые системы. 
+
+
+## Ссылки
+
+* **Датасет:**  [https://huggingface.co/datasets/medical_questions_pairs](https://huggingface.co/datasets/medical_questions_pairs)
+* **SentenceTransformers:**  [https://www.sbert.net/](https://www.sbert.net/)
+* **Streamlit:**  [https://streamlit.io/](https://streamlit.io/)
+* **FastAPI:**  [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)

@@ -14,10 +14,10 @@ def find_similar_questions(question, model, idx2emd, idx2sen, top_n=5):
         model (SentenceTransformer): Модель SentenceTransformers.
         idx2emd (dict): Словарь индекс-эмбеддинг.
         idx2sen (dict): Словарь индекс-вопрос.
-        top_n (int, optional): Количество возвращаемых похожих вопросов. Defaults to 5.
+        top_n (int, optional): Количество возвращаемых похожих вопросов. По умолчанию 5.
 
     Returns:
-        list: Список кортежей (вопрос,  оценка сходства).
+        list: Список кортежей (вопрос, оценка сходства).
     """
     question_embedding = model.encode(question)
     similarities = [util.cos_sim(question_embedding, emb) for emb in idx2emd.values()]
@@ -50,7 +50,7 @@ async def get_similar_questions(question: str):
         question (str): Входной вопрос.
 
     Returns:
-        list: Список похожих вопросов со степенью сходства, где 1 - 100% сходство.
+        list: Список похожих вопросов со степенью сходства, где 1 = 100% сходство.
     """
     similar_questions = find_similar_questions(question, model, idx2emd, idx2sen)
     return {"similar_questions": similar_questions}
