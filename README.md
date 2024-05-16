@@ -1,7 +1,7 @@
 # Сервис поиска похожих вопросов для медицинских форумов
 
 - Полный отчёт по проекту можно посмотреть в [report.md](https://github.com/FedorSafonov/Medical-QA--MLE-/blob/reveiw/report.md)
-- [Ссылка на веб приложение в streamlit](https://fedorsafonov-medical-qa--mle--streamlit-app-agoi6t.streamlit.app/)
+- [Ссылка на веб приложение в streamlit](https://medicalquestions.streamlit.app/)
 
 ## Описание
 
@@ -243,13 +243,13 @@
 
 ## Приложение Streamlit
 
-[Ссылка на веб приложение](https://fedorsafonov-medical-qa--mle--streamlit-app-agoi6t.streamlit.app/)
+[Ссылка на веб приложение](https://medicalquestions.streamlit.app/)
 
 
 Приложение Streamlit позволяет пользователю ввести вопрос и получить список из 5  наиболее похожих вопросов из базы данных.  Сходство между вопросами отображается в процентах. 
 
 **Инструкции по использованию:**
-- Открыть приложение по [ссылке](https://fedorsafonov-medical-qa--mle--streamlit-app-agoi6t.streamlit.app/)
+- Открыть приложение по [ссылке](https://medicalquestions.streamlit.app/)
 - Выбрать язык (по умолчанию - Русский)
 - Ввести вопрос на английском языке в поле "Введите ваш вопрос"
 - Нажать на кнопку "Найти похожие вопросы"
