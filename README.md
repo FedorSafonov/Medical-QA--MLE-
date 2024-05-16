@@ -265,14 +265,14 @@
 Микросервис FastAPI  предоставляет API  для поиска похожих вопросов.  API  имеет один endpoint  `/similar_questions`,  который принимает на вход вопрос в виде строки  и возвращает JSON  список похожих вопросов и их оценок сходства. 
 
 **Инструкции по использованию:**
-- 1. Скачать файлы 'model', 'idx2emb.pkl', 'idx2sen.pkl', 'fastapi_app.py', 'requirements.txt'
+- 1. Скачать файлы 'model', 'idx2emb.pkl', 'idx2sen.pkl', 'app.py', 'requirements.txt'
 - 2. Установить зависимости:
    ```bash
    pip install -r requirements.txt
    ```
 - 3. Запуститm API  FastAPI:
    ```bash
-   uvicorn fastapi_app:app --reload
+   uvicorn app:app --reload
    ```
 - 4. Тестирование:
     - Открыть адрес http://127.0.0.1:8000/docs в браузере. Здесь можно увидеть интерактивную документацию Swagger UI, которая позволяет отправлять запросы к API и просматривать ответы.
