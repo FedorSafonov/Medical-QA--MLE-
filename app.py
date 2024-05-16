@@ -9,10 +9,10 @@ from ml_functions import find_similar_questions
 async def lifespan(app: FastAPI):
     global model, idx2emd, idx2sen
     # Load the ML model
-    with open("/data/idx2emb.pkl", "rb") as f:
+    with open("data/idx2emb.pkl", "rb") as f:
         idx2emd = pickle.load(f)
 
-    with open("/data/idx2sen.pkl", "rb") as f:
+    with open("data/idx2sen.pkl", "rb") as f:
         idx2sen = pickle.load(f)
 
     model = SentenceTransformer('model')
