@@ -7,10 +7,10 @@ from ml_functions import find_similar_questions
 # Загрузка модели и эмбеддингов
 @st.cache_resource
 def load_data():
-    with open("/data/idx2emb.pkl", "rb") as f:
+    with open("data/idx2emb.pkl", "rb") as f:
         idx2emd = pickle.load(f)
 
-    with open("/data/idx2sen.pkl", "rb") as f:
+    with open("data/idx2sen.pkl", "rb") as f:
         idx2sen = pickle.load(f)
 
     model = SentenceTransformer('model')
