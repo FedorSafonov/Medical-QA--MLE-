@@ -299,6 +299,8 @@
 ## Cтатус: 
 Завершён.
 
+## Стэк:
+Python, ML, MLE, NLP, pandas, numpy, FastAPI, Streamlit, SentenceTransformers, spacy, Word2Vec, scipy, torch, sklearn, matplotlib, pickle
 
 ## Ссылки
 
