@@ -266,6 +266,7 @@
 
 **Инструкции по использованию:**
 - 1) Скачать файлы `'download_model.py'`, `'idx2emb.pkl'`, `'idx2sen.pkl'`, `'app.py'`, `'requirements.txt'`.
+
 - 2) Установить зависимости:
   ```bash
   pip install -r requirements.txt
@@ -274,10 +275,13 @@
   ```bash
   python download_model.py
   ```
+  Или скачать директорию `model`.
+
 - 4) Запуститm API  FastAPI:
    ```bash
    uvicorn app:app --reload
    ```
+   
 - 5) Тестирование:
 
   Открыть адрес http://127.0.0.1:8000/docs в браузере. Здесь можно увидеть интерактивную документацию Swagger UI, которая позволяет отправлять запросы к API и просматривать ответы.
