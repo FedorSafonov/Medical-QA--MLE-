@@ -13,7 +13,7 @@ def load_data():
     with open("data/idx2sen.pkl", "rb") as f:
         idx2sen = pickle.load(f)
 
-    model = SentenceTransformer('model')
+    model = SentenceTransformer('all-MiniLM-L6-v2')
     return model, idx2emd, idx2sen
 
 model, idx2emd, idx2sen = load_data()

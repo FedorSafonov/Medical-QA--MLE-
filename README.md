@@ -1,6 +1,6 @@
 # Сервис поиска похожих вопросов для медицинских форумов
 
-- Полный отчёт по проекту можно посмотреть в [report.md](https://github.com/FedorSafonov/Medical-QA--MLE-/blob/reveiw/report.md)
+- Полный отчёт по проекту можно посмотреть в [report.md](https://github.com/FedorSafonov/Medical_QA/blob/main/report.md)
 - [Ссылка на веб приложение в streamlit](https://medicalquestions.streamlit.app/)
 
 ## Описание
@@ -265,17 +265,22 @@
 Микросервис FastAPI  предоставляет API  для поиска похожих вопросов.  API  имеет один endpoint  `/similar_questions`,  который принимает на вход вопрос в виде строки  и возвращает JSON  список похожих вопросов и их оценок сходства. 
 
 **Инструкции по использованию:**
-- 1. Скачать файлы 'model', 'idx2emb.pkl', 'idx2sen.pkl', 'app.py', 'requirements.txt'
-- 2. Установить зависимости:
-   ```bash
-   pip install -r requirements.txt
-   ```
-- 3. Запуститm API  FastAPI:
+- 1) Скачать файлы `'download_model.py'`, `'idx2emb.pkl'`, `'idx2sen.pkl'`, `'app.py'`, `'requirements.txt'`.
+- 2) Установить зависимости:
+  ```bash
+  pip install -r requirements.txt
+  ```
+- 3) Загрузить модель:
+  ```bash
+  python download_model.py
+  ```
+- 4) Запуститm API  FastAPI:
    ```bash
    uvicorn app:app --reload
    ```
-- 4. Тестирование:
-    - Открыть адрес http://127.0.0.1:8000/docs в браузере. Здесь можно увидеть интерактивную документацию Swagger UI, которая позволяет отправлять запросы к API и просматривать ответы.
+- 5) Тестирование:
+
+  Открыть адрес http://127.0.0.1:8000/docs в браузере. Здесь можно увидеть интерактивную документацию Swagger UI, которая позволяет отправлять запросы к API и просматривать ответы.
 
 Внешний вид документации.
 ![alt text](/images/image-1.png)
