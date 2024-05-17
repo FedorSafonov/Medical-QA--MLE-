@@ -13,7 +13,7 @@
 
 ### Исходные данные
 
-Для обучения и тестирования моделей используется датасет "medical_questions_pairs" от Hugging Face.  Датасет содержит пары вопросов на английском языке, связанных с медицинской тематикой.
+Для обучения и тестирования моделей используется датасет [`"medical_questions_pairs"`][1] от Hugging Face.  Датасет содержит пары вопросов на английском языке, связанных с медицинской тематикой.
 
 ### Методы
 
@@ -309,7 +309,9 @@ Python, ML, MLE, NLP, pandas, numpy, FastAPI, Streamlit, SentenceTransformers, s
 
 ## Ссылки
 
-* **Датасет:**  [https://huggingface.co/datasets/medical_questions_pairs](https://huggingface.co/datasets/medical_questions_pairs)
+* **Датасет:**  [https://huggingface.co/datasets/medical_questions_pairs][1]
 * **SentenceTransformers:**  [https://www.sbert.net/](https://www.sbert.net/)
 * **Streamlit:**  [https://streamlit.io/](https://streamlit.io/)
 * **FastAPI:**  [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)
+
+[1]:https://huggingface.co/datasets/medical_questions_pairs
